@@ -25,7 +25,7 @@ class PlayActivity : AppCompatActivity() {
     )
     var  index = 0
     var Finished = false
-    var skip = -1
+    var skip = 0
     var carrect = 0
     var worng  = 0
 
@@ -78,6 +78,7 @@ class PlayActivity : AppCompatActivity() {
         binding.apply {
             if (rediogroup.checkedRadioButtonId == -1){
                 skip++
+                alartdialog("skip to the question")
 
             }else{
                 var checkButton = findViewById<RadioButton>(rediogroup.checkedRadioButtonId)
