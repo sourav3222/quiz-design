@@ -5,16 +5,24 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.quizeappdesign.databinding.ActivityPlayBinding
 
 class PlayActivity : AppCompatActivity() {
+    lateinit var binding: ActivityPlayBinding
+
+    val quizList = listOf<Quiz>(
+        Quiz(
+            "victory day of bangladesh"
+            "12 jan"
+            "13 jan"
+            "16 dec"
+        )
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_play)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
-        }
+        binding = ActivityPlayBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+
     }
 }
