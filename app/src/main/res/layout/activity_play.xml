@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:orientation="vertical"
+    android:background="#AA7185"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".PlayActivity">
@@ -11,7 +12,7 @@
     <ImageView
         android:layout_width="111dp"
         android:layout_height="111dp"
-        android:src="@drawable/pic"
+        android:src="@drawable/pics"
         android:layout_gravity="center"
         android:layout_marginTop="31dp"/>
     <TextView
@@ -81,7 +82,7 @@
             android:id="@+id/nextbtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Next Play"
+            android:text="Next "
             android:textStyle="bold"
             android:textSize="22sp"
             android:layout_marginTop="42dp"
