@@ -2,6 +2,7 @@ package com.example.quizeappdesign
 
 import android.app.AlertDialog
 import android.content.DialogInterface
+import android.content.Intent
 import android.os.Bundle
 import android.widget.RadioButton
 import androidx.appcompat.app.AppCompatActivity
@@ -108,9 +109,18 @@ class PlayActivity : AppCompatActivity() {
 
         builder.setTitle(massage)
 
-        builder.setPositiveButton("Successfully ",object : DialogInterface.OnClickListener{
+        builder.setPositiveButton("OK ",object : DialogInterface.OnClickListener{
             override fun onClick(p0: DialogInterface?, p1: Int) {
 
+                if (massage == "Finished"){
+                    val intent = Intent(this@PlayActivity, ResultActivity::class.java)
+                    intent.putExtra(" skip",skip)
+                    intent.putExtra(" carrect",carrect)
+                    intent.putExtra(" worng",worng)
+
+
+                    startActivity(intent)
+                }
             }
 
 
