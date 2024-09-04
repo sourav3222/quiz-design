@@ -26,7 +26,7 @@ class PlayActivity : AppCompatActivity() {
     )
     var  index = 0
     var Finished = false
-    var skip = 0
+    var skip = -1
     var carrect = 0
     var worng  = 0
 
